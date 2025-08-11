@@ -18,6 +18,11 @@ FLASK_APP=app.py flask run --host=0.0.0.0 --port=5000
 ```
 Then open http://localhost:5000 in your browser.
 
+## Tests
+```bash
+pytest -q
+```
+
 ## Usage
 - Prepare a CSV with headers: `Customer ID, First Name, Order Value`.
 - Navigate to `/` and upload the CSV.
