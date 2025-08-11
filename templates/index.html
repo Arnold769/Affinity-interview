@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rewarder - Upload CSV</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 2rem; }
+    .card { max-width: 560px; padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px; }
+    h1 { font-size: 1.5rem; margin-top: 0; }
+    .hint { color: #555; font-size: 0.9rem; }
+    input[type="file"] { display: block; margin: 1rem 0; }
+    button { background: #0d6efd; color: white; border: none; padding: 0.6rem 1rem; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #0b5ed7; }
+    code { background: #f6f8fa; padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Rewarder</h1>
+    <p class="hint">Upload a CSV with columns: <code>Customer ID</code>, <code>First Name</code>, <code>Order Value</code>. Eligible rows will receive a voucher in the downloaded CSV.</p>
+    <form action="/" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".csv,text/csv" required />
+      <button type="submit">Process and Download Vouchers</button>
+    </form>
+  </div>
+</body>
+</html>
